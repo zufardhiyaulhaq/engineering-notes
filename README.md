@@ -3,3 +3,5 @@ hello, this repository will contain all notes, wiki, instalation step, tutorial 
 
 ### List of notes
 - [Building & Push Docker Image into Repository](notes/docker-build-push-repo.md)
+- [Install Kubernetes with Kubeadm](notes/kubernetes-kubeadm-install.md)
+- [Check & Update Kubernetes Certificate (install with kubeadm)](notes/renew-kubeadm-kubernetes-cluster.md)
