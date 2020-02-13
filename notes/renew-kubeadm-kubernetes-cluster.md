@@ -66,4 +66,4 @@ etcd-ca                 Feb 07, 2030 08:59 UTC   9y              no
 front-proxy-ca          Feb 07, 2030 08:59 UTC   9y              no
 root@k8s-community-master:~#
 ```
-***Notes***: this command only renew certificate in master node
+***Notes***: this command only renew certificate in master node, kubeadm automatically renew certificate in kubelet/worker node before the certificate expired.
