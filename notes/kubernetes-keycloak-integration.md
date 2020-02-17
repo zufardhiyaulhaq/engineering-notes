@@ -24,6 +24,7 @@
 | Valid Redirect URIs | * |
 
 - For `kubernetes` client create protocol mapper called `user_groups`
+
 | option | value |
 | - | - |
 | name | user_groups |
@@ -153,10 +154,24 @@ KEYCLOAK_REALM=IAM
 KEYCLOAK_CLIENT_ID=kubernetes
 KEYCLOAK_CLIENT_SECRET=eef3e405-76d3-4e7d-bc2b-8597cd447ca8
 ```
+copy & execute the command from the bash
 ```
 apt install jq
 bash keycloak-kubectl.sh
 ```
-add the output into kubeconfig in user section and run
+set the cluster to use the spesific user
 ```
-kubectl config set-context default --cluster=kubernetes-the-hard-way --user=admin-user
+kubectl config set-context default --cluster=cluster-name --user=admin-user
+```
+- Testing
+```
+root@k8s-master1:~# kubectl get nodes
+NAME            STATUS   ROLES    AGE   VERSION
+10.102.102.20   Ready    master   28h   v1.15.5
+10.102.102.21   Ready    master   28h   v1.15.5
+10.102.102.22   Ready    master   28h   v1.15.5
+10.102.102.30   Ready    worker   28h   v1.15.5
+10.102.102.31   Ready    worker   28h   v1.15.5
+10.102.102.32   Ready    worker   28h   v1.15.5
+10.102.102.33   Ready    worker   28h   v1.15.5
+```
