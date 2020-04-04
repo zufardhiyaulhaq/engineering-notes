@@ -8,3 +8,4 @@ hello, this repository will contain all notes, wiki, instalation step, tutorial 
 - [Install Kubernetes with minikube](notes/kubernetes-minikube-install.md)
 - [Keycloak installation](notes/keycloak-installation.md)
 - [Integrating Keycloak with Kubernetes](notes/kubernetes-keycloak-integration.md)
+- [Kubernetes create kubeconfig from ServiceAccount (access only spesific namespace)](notes/kubernetes-kubeconfig-sa.md)
