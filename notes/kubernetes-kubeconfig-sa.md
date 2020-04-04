@@ -43,7 +43,7 @@ subjects:
 NAMESPACE=production
 SERVICE_ACCOUNT=production-sa
 APISERVER=$(kubectl config view --minify -o jsonpath='{.clusters[0].cluster.server}')
-SECRET_NAME=$(kubectl get serviceaccount -n $NAMESPACE default -o jsonpath='{.secrets[0].name}')
+SECRET_NAME=$(kubectl get serviceaccount -n $NAMESPACE $SERVICE_ACCOUNT -o jsonpath='{.secrets[0].name}')
 TOKEN=$(kubectl get secret -n $NAMESPACE $SECRET_NAME -o jsonpath='{.data.token}' | base64 --decode)
 CA=$(kubectl get secret -n $NAMESPACE $SECRET_NAME -o jsonpath='{.data.ca\.crt}')
 ```
