@@ -2,7 +2,7 @@
 
 - Create `production` namespace
 ```
-kubectl create namespace wordpress
+kubectl create namespace production
 ```
 - Apply below command to kubernetes, create production-sa service account and grant full access to production namespace.
 ```
